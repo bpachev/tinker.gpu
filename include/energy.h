@@ -27,6 +27,7 @@
 #include "echgtrn.h"
 #include "edisp.h"
 #include "ehippo.h"
+#include "erepel.h"
 
 
 namespace tinker {

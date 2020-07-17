@@ -57,6 +57,7 @@ void energy_data(rc_op op)
 
    // HIPPO
    rc_man echgtrn42{echgtrn_data, op};
+   rc_man erepel42{erepel_data, op};
    rc_man edisp42{edisp_data, op};
 }
 
@@ -172,6 +173,9 @@ void energy_core(int vers, unsigned tsflag, const TimeScaleConfig& tsconfig)
    if (use_potent(chgtrn_term))
       if (tscfg("echgtrn", ecore_ele))
          echgtrn(vers);
+   if (use_potent(repuls_term))
+      if (tscfg("erepel", ecore_vdw))
+         erepel(vers);
    if (use_potent(disp_term))
       if (tscfg("edisp", ecore_vdw))
          edisp(vers);
